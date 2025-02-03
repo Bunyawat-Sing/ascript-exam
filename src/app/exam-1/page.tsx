@@ -26,7 +26,7 @@ export default function RegisterPage() {
 
     try {
       await registerUser(data);
-      router.push("/exam-1/success");
+      router.push("/exam-1/success"); // Redirect หลังจากลงทะเบียนสำเร็จ
     } catch (err) {
       setServerError(err instanceof Error ? err.message : "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง");
     } finally {
@@ -35,73 +35,73 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">ลงทะเบียน</h1>
-      {serverError && <p className="text-red-500 mb-4">{serverError}</p>}
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mb-4">
-          <label htmlFor="email" className="block mb-2">
-            อีเมล
-          </label>
-          <input {...register("email")} type="email" id="email" className="w-full p-2 border rounded" />
-          {errors.email && <p className="text-red-500">{errors.email.message}</p>}
-        </div>
-        <div className="mb-4">
-          <label htmlFor="password" className="block mb-2">
-            รหัสผ่าน
-          </label>
-          <input {...register("password")} type="password" id="password" className="w-full p-2 border rounded" />
-          {errors.password && <p className="text-red-500">{errors.password.message}</p>}
-        </div>
-        <div className="mb-4">
-          <label htmlFor="confirmPassword" className="block mb-2">
-            ยืนยันรหัสผ่าน
-          </label>
-          <input
-            {...register("confirmPassword")}
-            type="password"
-            id="confirmPassword"
-            className="w-full p-2 border rounded"
-          />
-          {errors.confirmPassword && <p className="text-red-500">{errors.confirmPassword.message}</p>}
-        </div>
-        <div className="mb-4">
-          <label htmlFor="fullName" className="block mb-2">
-            ชื่อ-นามสกุล
-          </label>
-          <input {...register("fullName")} type="text" id="fullName" className="w-full p-2 border rounded" />
-          {errors.fullName && <p className="text-red-500">{errors.fullName.message}</p>}
-        </div>
-        <div className="mb-4">
-          <label htmlFor="phone" className="block mb-2">
-            เบอร์โทรศัพท์
-          </label>
-          <input {...register("phone")} type="tel" id="phone" className="w-full p-2 border rounded" />
-          {errors.phone && <p className="text-red-500">{errors.phone.message}</p>}
-        </div>
-        <div className="mb-4">
-          <label htmlFor="address" className="block mb-2">
-            ที่อยู่
-          </label>
-          <textarea {...register("address")} id="address" className="w-full p-2 border rounded"></textarea>
-          {errors.address && <p className="text-red-500">{errors.address.message}</p>}
-        </div>
-        <div className="mb-4">
-          <label htmlFor="gender" className="block mb-2">
-            เพศ
-          </label>
-          <select {...register("gender")} id="gender" className="w-full p-2 border rounded">
-            <option value="">เลือกเพศ</option>
-            <option value="male">ชาย</option>
-            <option value="female">หญิง</option>
-            <option value="other">อื่นๆ</option>
-          </select>
-          {errors.gender && <p className="text-red-500">{errors.gender.message}</p>}
-        </div>
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded" disabled={isLoading}>
-          {isLoading ? "กำลังลงทะเบียน..." : "ลงทะเบียน"}
-        </button>
-      </form>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+      <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+        <h1 className="text-2xl font-bold text-center text-gray-700 mb-6">ลงทะเบียน</h1>
+        {serverError && <p className="text-red-500 mb-4">{serverError}</p>}
+
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          {[
+            { id: "email", label: "อีเมล", type: "email" },
+            { id: "password", label: "รหัสผ่าน", type: "password" },
+            { id: "confirmPassword", label: "ยืนยันรหัสผ่าน", type: "password" },
+            { id: "fullName", label: "ชื่อ-นามสกุล", type: "text" },
+            { id: "phone", label: "เบอร์โทรศัพท์", type: "tel" },
+          ].map(({ id, label, type }) => (
+            <div key={id}>
+              <label htmlFor={id} className="block text-gray-600 font-medium mb-1">
+                {label}
+              </label>
+              <input
+                {...register(id as keyof UserSchema)}
+                type={type}
+                id={id}
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none"
+              />
+              {errors[id as keyof UserSchema] && (
+                <p className="text-red-500">{errors[id as keyof UserSchema]?.message}</p>
+              )}
+            </div>
+          ))}
+
+          <div>
+            <label htmlFor="address" className="block text-gray-600 font-medium mb-1">
+              ที่อยู่
+            </label>
+            <textarea
+              {...register("address")}
+              id="address"
+              className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none"
+            ></textarea>
+            {errors.address && <p className="text-red-500">{errors.address.message}</p>}
+          </div>
+
+          <div>
+            <label htmlFor="gender" className="block text-gray-600 font-medium mb-1">
+              เพศ
+            </label>
+            <select
+              {...register("gender")}
+              id="gender"
+              className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none"
+            >
+              <option value="">เลือกเพศ</option>
+              <option value="male">ชาย</option>
+              <option value="female">หญิง</option>
+              <option value="other">อื่นๆ</option>
+            </select>
+            {errors.gender && <p className="text-red-500">{errors.gender.message}</p>}
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium p-2 rounded transition"
+            disabled={isLoading}
+          >
+            {isLoading ? "กำลังลงทะเบียน..." : "ลงทะเบียน"}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
