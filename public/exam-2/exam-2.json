@@ -1,0 +1,207 @@
+[
+  {
+    "id": 1,
+    "image": "/exam-2/image.png",
+    "email": "john.doe@example.com",
+    "fullName": "John Doe",
+    "phone": "1234567890",
+    "address": "123 Main St, City",
+    "gender": "male",
+    "age": 20
+  },
+  {
+    "id": 2,
+    "image": "/exam-2/image.png",
+    "email": "jane.smith@example.com",
+    "fullName": "Jane Smith",
+    "address": "456 Oak Ave, Town",
+    "gender": "female",
+    "age": 25
+  },
+  {
+    "id": 3,
+    "email": "bob.wilson@example.com",
+    "fullName": "Bob Wilson",
+    "phone": "3456789012",
+    "address": "789 Pine Rd, Village",
+    "gender": "male",
+    "age": 35
+  },
+  {
+    "id": 4,
+    "email": "mary.jones@example.com",
+    "fullName": "Mary Jones",
+    "phone": "4567890123",
+    "address": "321 Elm St, County",
+    "gender": "female",
+    "age": 28
+  },
+  {
+    "id": 5,
+    "image": "/exam-2/image.png",
+    "email": "steve.brown@example.com",
+    "fullName": "Steve Brown",
+    "address": "654 Maple Dr, State",
+    "gender": "male",
+    "age": 42
+  },
+  {
+    "id": 6,
+    "image": "/exam-2/image.png",
+    "email": "sarah.miller@example.com",
+    "fullName": "Sarah Miller",
+    "phone": "6789012345",
+    "address": "987 Cedar Ln, District",
+    "age": 31
+  },
+  {
+    "id": 7,
+    "image": "/exam-2/image.png",
+    "email": "mike.davis@example.com",
+    "fullName": "Mike Davis",
+    "phone": "7890123456",
+    "gender": "male",
+    "age": 38
+  },
+  {
+    "id": 8,
+    "email": "lisa.taylor@example.com",
+    "fullName": "Lisa Taylor",
+    "phone": "8901234567"
+  },
+  {
+    "id": 9,
+    "email": "tom.anderson@example.com",
+    "fullName": "Tom Anderson",
+    "gender": "male",
+    "age": 45
+  },
+  {
+    "id": 10,
+    "email": "emma.white@example.com",
+    "fullName": "Emma White",
+    "phone": "0123456789",
+    "address": "741 Ash Rd, Sector",
+    "age": 33
+  },
+  {
+    "id": 11,
+    "email": "david.lee@example.com",
+    "fullName": "David Lee",
+    "address": "852 Oak St, Block",
+    "gender": "male"
+  },
+  {
+    "id": 12,
+    "email": "amy.garcia@example.com",
+    "fullName": "Amy Garcia",
+    "phone": "2233445566",
+    "address": "963 Pine Ave, Unit",
+    "gender": "female",
+    "age": 26
+  },
+  {
+    "id": 13,
+    "email": "chris.martin@example.com",
+    "fullName": "Chris Martin",
+    "phone": "3344556677",
+    "address": "159 Elm Dr, Complex"
+  },
+  {
+    "id": 14,
+    "email": "karen.lopez@example.com",
+    "fullName": "Karen Lopez",
+    "phone": "4455667788",
+    "gender": "female"
+  },
+  {
+    "id": 15,
+    "image": "/exam-2/image.png",
+    "email": "peter.king@example.com",
+    "fullName": "Peter King",
+    "phone": "5566778899",
+    "address": "246 Cedar St, District",
+    "gender": "male",
+    "age": 39
+  },
+  {
+    "id": 16,
+    "image": "/exam-2/image.png",
+    "email": "nancy.wright@example.com",
+    "fullName": "Nancy Wright",
+    "address": "135 Birch Ave, Area",
+    "gender": "female",
+    "age": 27
+  },
+  {
+    "id": 17,
+    "email": "george.hall@example.com",
+    "fullName": "George Hall",
+    "phone": "7788990011",
+    "address": "468 Spruce Rd, Zone",
+    "gender": "male",
+    "age": 44
+  },
+  {
+    "id": 18,
+    "email": "helen.adams@example.com",
+    "fullName": "Helen Adams",
+    "phone": "8899001122",
+    "address": "791 Willow St, Sector",
+    "gender": "female",
+    "age": 32
+  },
+  {
+    "id": 19,
+    "email": "frank.baker@example.com",
+    "fullName": "Frank Baker",
+    "address": "024 Ash Ave, Block",
+    "gender": "male",
+    "age": 36
+  },
+  {
+    "id": 20,
+    "email": "diana.clark@example.com",
+    "fullName": "Diana Clark",
+    "phone": "0011223344",
+    "address": "357 Oak Dr, Unit",
+    "gender": "female",
+    "age": 30
+  },
+  {
+    "id": 21,
+    "email": "eric.young@example.com",
+    "fullName": "Eric Young",
+    "phone": "1122334455",
+    "address": "680 Pine Ln, Complex",
+    "gender": "male",
+    "age": 43
+  },
+  {
+    "id": 22,
+    "email": "rachel.hill@example.com",
+    "fullName": "Rachel Hill",
+    "phone": "2233445566",
+    "address": "913 Elm St, Quarter",
+    "gender": "female",
+    "age": 28
+  },
+  {
+    "id": 23,
+    "email": "paul.scott@example.com",
+    "fullName": "Paul Scott",
+    "phone": "3344556677",
+    "address": "246 Maple Ave, District",
+    "gender": "male",
+    "age": 40
+  },
+  {
+    "id": 24,
+    "image": "/exam-2/image.png",
+    "email": "olivia.green@example.com",
+    "fullName": "Olivia Green",
+    "phone": "4455667788",
+    "address": "579 Cedar Rd, Zone",
+    "gender": "female"
+  }
+]
